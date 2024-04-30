@@ -1,0 +1,274 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    height: 72px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hleft{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
+.fa-bars{
+    margin-left: 20px;
+    cursor: pointer;
+}
+.yt{
+    margin-left: 20px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.search-bar{
+    display: flex;
+    width: 600px;
+    font-size: large;
+}
+.inp-search{
+    width: 500px;
+    height: 100%;
+    border: 1px solid rgb(223, 213, 213);
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    font-weight: 700;
+}
+.search-bar button{
+    cursor: pointer;
+    padding: 4px 4px;
+    border: 1px solid rgb(223, 213, 213);
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+.fa-microphone{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: -10px;
+    border-radius: 50%;
+    padding: 0px 10px;
+    background-color: #e5e5e5;
+}
+.fa-microphone:hover{
+    opacity: 0.85;
+}
+.hright{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: none;
+    width: 250px;
+    font-size: large;
+    padding: 4px 4px;   
+}
+.hright i{
+    cursor: pointer;
+}
+
+
+/*main-body*/
+
+.main-body{
+    border: none;
+    height: calc(100vh - 70px);
+    display: flex;
+    overflow: hidden;
+}
+ /* sidebar */
+
+ .sidebar{
+    height: 100%;
+    width: 230px;
+    background-color: white;
+    overflow-y: scroll;
+ }
+
+ .sidebar-categories{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    margin-bottom: 15px;
+ }
+ .sidebar-category{
+    display: flex;
+    align-items: center;
+    padding: 12px 25px;
+ }
+
+ .sidebar-category span{
+    margin-left: 15px;
+ }
+
+ .sidebar-category:hover{
+    background-color: #e5e5e5;
+    cursor: pointer;
+ }
+ hr{
+    background-color: #e5e5e5;
+ }
+
+
+
+ /* Videos */
+
+ .videos{
+    background-color: #f9f9f9;
+    width: 100%;
+    height: 100%;
+    padding: 15px 25px;
+    border-top: 1px solid #ddd;
+    overflow-y: scroll;
+ }
+
+ .videos-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+ }
+ .video{
+    width: 310px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+ }
+
+ .video-thumbnail{
+    width: 100%;
+    height: 170px;
+ }
+
+ .video-thumbnail img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+ }
+
+ .author img{
+    object-fit: cover;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+ }
+
+ .video-details{
+    display: flex;
+    margin-top: 10px;
+ }
+.title{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.title h3{
+    color: rgb(3, 3, 3);
+    line-height: 18px;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.title a, span{
+    text-decoration: none;
+    color: rgb(96, 96, 96);
+    font-size: 14px;
+}
+
+h1{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: rgb(3, 3, 3);
+
+}
+
+
+@media only screen and (max-width: 320px) {
+
+    header {
+        height: 90px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .search-bar {
+        display: flex;
+        width: 100%;
+
+    }
+    .inp-search {
+        width: calc(100% - 50px);
+    }
+    .search-bar button {
+        width: 50px;
+    }
+
+    .sidebar {
+        display: none; 
+    }
+
+    .videos {
+        padding: 15px;
+    }
+    .search-bar button {
+        padding: 4px 0; 
+    }
+    .fa-microphone{
+        margin: 0;
+    }
+}
+
+
+@media only screen and (max-width: 425px) {
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    .hright {
+        width: calc(100% - 120px);
+    }
+    .fa-microphone{
+        margin:0;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    header {
+        height: auto;
+    }
+    .hleft {
+        margin-bottom: 10px;
+    }
+    .yt {
+        margin: 0;
+    }
+   
+    .sidebar {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .videos-container {
+        justify-content: center;
+    }
+    .video {
+        width: 100%;
+        max-width: 300px;
+        margin-right: 0;
+    }
+}
